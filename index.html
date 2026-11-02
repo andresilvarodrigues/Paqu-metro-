@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador de Parquímetro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="parquimetro">
+    <header class="topo">
+      <span class="letra-p" aria-hidden="true">P</span>
+      <h1>Parquímetro</h1>
+    </header>
+
+    <section id="visor" class="visor" aria-live="polite">
+      <p class="rotulo">Tempo de permanência</p>
+      <p id="tempo" class="tempo">00:00</p>
+      <p id="mensagem" class="mensagem">Insira um valor para começar.</p>
+    </section>
+
+    <form id="form-parquimetro" class="entrada" novalidate>
+      <label for="valor">Valor inserido (R$)</label>
+      <div class="campo">
+        <input type="text" id="valor" inputmode="decimal" autocomplete="off" placeholder="0,00">
+        <button type="submit">Calcular</button>
+      </div>
+
+      <div class="atalhos" role="group" aria-label="Valores rápidos">
+        <button type="button" data-valor="0,50">0,50</button>
+        <button type="button" data-valor="1,00">1,00</button>
+        <button type="button" data-valor="1,75">1,75</button>
+        <button type="button" data-valor="2,00">2,00</button>
+        <button type="button" data-valor="3,00">3,00</button>
+        <button type="button" data-valor="5,00">5,00</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
